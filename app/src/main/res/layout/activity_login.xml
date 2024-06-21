@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkgreen"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="55dp"
+        android:layout_height="77dp"
+        android:src="@drawable/logoterang"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/magicbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="MagicBook"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magicbook"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/dotsIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:gravity="center"
+        android:text="Ekspresikan dirimu dengan sebuah tulisan Berkolaborasilah di Aplikasi MagicBook dan tunjukan bakatmu"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dotsIndicator"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Username"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/quicksand_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/username_title"
+        app:layout_constraintTop_toBottomOf="@+id/username_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:hint="Masukkan username kamu"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Password"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/quicksand_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/password_title"
+        app:layout_constraintTop_toBottomOf="@+id/password_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:hint="Masukkan password kamu"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Register?"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:onClick="onRegisterClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_layout"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:text="Login"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:cornerRadius="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
